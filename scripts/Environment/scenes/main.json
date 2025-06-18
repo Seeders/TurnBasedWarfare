@@ -3,7 +3,7 @@
   "sceneData": [
     {
       "id": 1,
-      "type": "game",
+      "type": "ECSGame",
       "objectType": "gamePrefabs",
       "spawnType": "main",
       "parent": null,

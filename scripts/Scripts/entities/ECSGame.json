@@ -2,13 +2,11 @@
   "title": "Game",
   "components": [
     "MapManager",
-    "UpgradeManager",
-    "AudioManager",
-    "ThreeJsWorld",
-    "Game"
+    "ThreeJsWorld"
   ],
   "renderers": [
     "MapRenderer",
     "UiManager"
-  ]
+  ],
+  "systems": []
 }
