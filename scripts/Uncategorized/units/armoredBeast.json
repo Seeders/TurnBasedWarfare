@@ -359,5 +359,9 @@
     }
   },
   "armor": 100,
-  "title": "Armored Beast"
+  "title": "Armored Beast",
+  "damage": 10,
+  "range": 2,
+  "size": 2,
+  "color": "yellow"
 }

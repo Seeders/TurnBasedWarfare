@@ -203,5 +203,6 @@
   },
   "evasion": 75,
   "energyShield": 30,
+  "size": 50,
   "title": "ghost"
 }

@@ -276,5 +276,6 @@
     }
   },
   "electricResistance": 75,
+  "size": 50,
   "title": "skeleton"
 }

@@ -321,5 +321,9 @@
     }
   },
   "armor": 50,
-  "title": "blood beast"
+  "title": "blood beast",
+  "attackSpeed": 1,
+  "damage": 10,
+  "size": 50,
+  "range": 2
 }

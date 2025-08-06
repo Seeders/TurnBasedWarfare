@@ -1,7 +1,7 @@
 {
   "essence": 5,
   "speed": 1,
-  "value": 1,
+  "value": 10,
   "hp": 10,
   "render": {
     "animations": {

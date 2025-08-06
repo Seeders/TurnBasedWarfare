@@ -134,5 +134,6 @@
     }
   },
   "energyShield": 50,
+  "size": 50,
   "title": "wraith"
 }
