@@ -1,7 +1,7 @@
-
 class ArmyDisplaySystem {
     constructor(app) {
         this.game = app;   
+        this.game.armyDisplaySystem = this;
         this.updateInterval = null;
         this.lastUpdateData = null;
     }
@@ -18,7 +18,7 @@ class ArmyDisplaySystem {
         }, 500);
     }
     
-    update() {
+    update(deltaTime) {
         const playerArmy = document.getElementById('playerArmy');
         const enemyArmy = document.getElementById('enemyArmy');
         
@@ -279,14 +279,14 @@ class ArmyDisplaySystem {
         `;
         
         // Use the input handler to show modal
-        if (this.game.uiManager.input) {
-            this.game.uiManager.input.showModal(`${armyType === 'player' ? '🛡️' : '⚔️'} Unit Info`, details);
+        if (this.game.uiSystem.input) {
+            this.game.uiSystem.input.showModal(`${armyType === 'player' ? '🛡️' : '⚔️'} Unit Info`, details);
         }
     }
     
     highlightUnit(unitId) {
         // Visual highlight on the battlefield (could integrate with effects system)
-        if (this.game.uiManager.effects) {
+        if (this.game.effectsSystem) {
             // Get unit position and show highlight effect
             try {
                 const ComponentTypes = this.game.componentManager.getComponentTypes();

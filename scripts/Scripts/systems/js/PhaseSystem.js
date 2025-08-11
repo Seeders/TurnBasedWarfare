@@ -1,22 +1,20 @@
-class PhaseManager {
+class PhaseSystem {
     constructor(app) {
         this.game = app;
-        this.game.phaseManager = this;
+        this.game.phaseSystem = this;
         this.phaseTimer = null;
     }
     
     startPlacementPhase() {
-        const state = this.game.uiManager.getGameState();
+        const state = this.game.state;
         state.phase = 'placement';
         state.phaseTimeLeft = 30;
         state.playerReady = false;
         
-        this.updateDisplay();
         this.showPlacementHints();
         
         this.phaseTimer = setInterval(() => {
             state.phaseTimeLeft--;
-            this.updateDisplay();
             
             if (state.phaseTimeLeft <= 0 || state.playerReady) {
                 clearInterval(this.phaseTimer);
@@ -26,30 +24,29 @@ class PhaseManager {
         
         // AI places units
         setTimeout(() => {
-            this.game.uiManager.placement.placeEnemyUnits();
+            this.game.placementSystem.placeEnemyUnits();
         }, 2000);
     }
     
     startBattlePhase() {
-        const state = this.game.uiManager.getGameState();
+        const state = this.game.state;
         state.phase = 'battle';
         
-        this.game.uiManager.statistics.recordBattleStart();
-        this.updateDisplay();
-        this.game.uiManager.battleLog.add(`Round ${state.round} battle begins!`, 'log-victory');
+        this.game.statisticsTrackingSystem.recordBattleStart();
+        this.game.battleLogSystem.add(`Round ${state.round} battle begins!`, 'log-victory');
         
         document.getElementById('readyButton').disabled = true;
-        this.game.uiManager.effects.playBattleStartAnimation();
+        this.game.effectsSystem.playBattleStartAnimation();
     }
     
     endBattle(result) {
-        const state = this.game.uiManager.getGameState();
+        const state = this.game.state;
         state.phase = 'ended';
         
-        const stats = this.game.uiManager.statistics.collectStats();
-        this.game.uiManager.statistics.updateSession(result, stats);
+        const stats = this.game.statisticsTrackingSystem.collectStats();
+        this.game.statisticsTrackingSystem.updateSession(result, stats);
         
-        this.game.uiManager.battleLog.add(
+        this.game.battleLogSystem.add(
             `Battle ${result === 'victory' ? 'won' : 'lost'}! Round ${stats.round} ${result === 'victory' ? 'complete' : 'ended'}.`,
             result === 'victory' ? 'log-victory' : 'log-death'
         );
@@ -66,8 +63,8 @@ class PhaseManager {
     }
     
     shouldEndCampaign() {
-        const gameMode = this.game.uiManager.getGameState()?.gameMode;
-        const round = this.game.uiManager.getGameState()?.round || 1;
+        const gameMode = this.game.state?.gameMode;
+        const round = this.game.state?.round || 1;
         
         switch (gameMode) {
             case 'campaign': return round >= 10;
@@ -78,7 +75,7 @@ class PhaseManager {
     }
     
     showRoundVictory(stats) {
-        this.game.uiManager.effects.showVictoryEffect(400, 300);
+        this.game.effectsSystem.showVictoryEffect(400, 300);
         
         const notification = document.createElement('div');
         notification.className = 'victory-notification';
@@ -97,7 +94,7 @@ class PhaseManager {
     }
     
     setupNextRound(stats) {
-        const state = this.game.uiManager.getGameState();
+        const state = this.game.state;
         state.playerGold += 50 + (stats.round * 10);
         state.round++;
         
@@ -109,8 +106,8 @@ class PhaseManager {
         this.startPlacementPhase();
     }
     
-    updateDisplay() {
-        const state = this.game.uiManager.getGameState();
+    update(deltaTime) {
+        const state = this.game.state;
         document.getElementById('roundNumber').textContent = state.round;
         document.getElementById('phaseTitle').textContent = 
             state.phase === 'placement' ? 'PLACEMENT PHASE' :
@@ -124,7 +121,7 @@ class PhaseManager {
     }
     
     toggleReady() {
-        const state = this.game.uiManager.getGameState();
+        const state = this.game.state;
         if (state.phase !== 'placement') return;
         
         state.playerReady = !state.playerReady;
@@ -140,18 +137,18 @@ class PhaseManager {
     }
     
     pause() {
-        this.game.uiManager.getGameState().isPaused = true;
+        this.game.state.isPaused = true;
         document.getElementById('pauseMenu').style.display = 'flex';
     }
     
     resume() {
-        this.game.uiManager.getGameState().isPaused = false;
+        this.game.state.isPaused = false;
         document.getElementById('pauseMenu').style.display = 'none';
     }
     
     restart() {
         if (confirm('Restart the game? Progress will be lost.')) {
-            const state = this.game.uiManager.getGameState();
+            const state = this.game.state;
             state.round = 1;
             state.playerGold = this.getStartingGold();
             
@@ -160,13 +157,13 @@ class PhaseManager {
             const allUnits = this.game.getEntitiesWith(ComponentTypes.TEAM);
             allUnits.forEach(entityId => this.game.destroyEntity(entityId));
             
-            this.game.uiManager.start();
+            this.game.uiSystem.start();
         }
         document.getElementById('pauseMenu').style.display = 'none';
     }
     
     getStartingGold() {
-        const gameMode = this.game.uiManager.getGameState()?.gameMode;
+        const gameMode = this.game.state?.gameMode;
         const goldConfig = {
             campaign: 100, survival: 150, arena: 200,
             challenge: 100, endless: 100, tournament: 120
@@ -185,7 +182,7 @@ class PhaseManager {
         
         const hint = hints[Math.floor(Math.random() * hints.length)];
         setTimeout(() => {
-            this.game.uiManager.battleLog.add(hint);
+            this.game.battleLogSystem.add(hint);
         }, 3000);
     }
 }

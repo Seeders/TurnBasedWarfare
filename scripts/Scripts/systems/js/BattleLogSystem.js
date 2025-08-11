@@ -1,6 +1,7 @@
 class BattleLogSystem {
     constructor(app) {
         this.game = app;  
+        this.game.battleLogSystem = this;
         this.entries = [];
         this.maxEntries = 100;
     }
@@ -20,7 +21,6 @@ class BattleLogSystem {
             this.entries = this.entries.slice(-50);
         }
         
-        this.updateDisplay();
     }
     
     categorizeMessage(className) {
@@ -30,7 +30,7 @@ class BattleLogSystem {
         return 'general';
     }
     
-    updateDisplay() {
+    update(deltaTime) {
         const battleLog = document.getElementById('battleLog');
         if (!battleLog) return;
 
@@ -54,7 +54,7 @@ class BattleLogSystem {
     }
     
     addModeSpecificTip() {
-        const gameMode = this.game.uiManager.getGameState()?.gameMode;
+        const gameMode = this.game.state?.gameMode;
         const tips = {
             survival: 'Survival Mode: Focus on cost-effective units!',
             challenge: 'Challenge Mode: Study enemy composition carefully!',

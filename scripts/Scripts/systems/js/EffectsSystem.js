@@ -1,6 +1,7 @@
 class EffectsSystem {
     constructor(app) {
         this.game = app;  
+        this.game.effectsSystem = this;
         this.particles = [];
         this.particleCanvas = null;
         this.particleContext = null;

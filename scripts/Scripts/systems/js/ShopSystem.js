@@ -1,7 +1,7 @@
-class ShopManager {
+class ShopSystem {
     constructor(app) {
         this.game = app;
-        this.game.shopManager = this;
+        this.game.shopSystem = this;
     }
     
     createShop() {
@@ -31,7 +31,7 @@ class ShopManager {
     }
     
     selectUnit(unitType) {
-        const state = this.game.uiManager.getGameState();
+        const state = this.game.state;
         if (state.phase !== 'placement' || state.playerGold < unitType.value) return;
         
         state.selectedUnitType = unitType;
@@ -42,11 +42,11 @@ class ShopManager {
         });
         event.target.closest('.unit-card').classList.add('selected');
         
-        this.game.uiManager.battleLog.add(`Selected ${unitType.title} (${unitType.value}g)`);
+        this.game.battleLogSystem.add(`Selected ${unitType.title} (${unitType.value}g)`);
     }
     
-    updateShop() {
-        const state = this.game.uiManager.getGameState();
+    update(deltaTime) {
+        const state = this.game.state;
         const UnitTypes = this.game.getCollections().units;
         
         document.querySelectorAll('.unit-card').forEach((card, index) => {

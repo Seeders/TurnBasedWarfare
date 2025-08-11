@@ -1,6 +1,7 @@
-class StatisticsTracker {
+class StatisticsTrackingSystem {
     constructor(app) {
         this.game = app; 
+        this.game.statisticsTrackingSystem = this;
         this.gameStartTime = null;
         this.battleStartTime = null;
         this.battleEndTime = null;
@@ -26,8 +27,8 @@ class StatisticsTracker {
     
     collectStats() {
         return {
-            round: this.game.uiManager.getGameState()?.round || 1,
-            goldEarned: this.game.uiManager.getGameState()?.playerGold || 0,
+            round: this.game.state?.round || 1,
+            goldEarned: this.game.state?.playerGold || 0,
             unitsDeployed: this.getUnitsDeployed(),
             unitsLost: this.getUnitsLost(),
             unitsRemaining: this.getUnitsRemaining(),
@@ -104,7 +105,7 @@ class StatisticsTracker {
         }
     }
     
-    updateDisplay() {
+    update(deltaTime) {
         // Update enhanced stats display
         const efficiency = this.calculateEfficiency();
         const armyValue = this.calculateArmyValue();

@@ -1,7 +1,7 @@
 class PlacementSystem {
     constructor(app) {
         this.game = app;
-                
+        this.game.placementSystem = this;
         // 3D mouse picking
         this.raycaster = new THREE.Raycaster();
         this.mouse = new THREE.Vector2();
@@ -9,12 +9,12 @@ class PlacementSystem {
     }
     
     handleCanvasClick(event) {
-        const state = this.game.uiManager.getGameState();
+        const state = this.game.state;
         
         if (state.phase !== 'placement' || !state.selectedUnitType) return;
         
         if (state.playerGold < state.selectedUnitType.value) {
-            this.game.uiManager.battleLog.add('Not enough gold!', 'log-damage');
+            this.game.battleLogSystem.add('Not enough gold!', 'log-damage');
             return;
         }
         
@@ -22,7 +22,7 @@ class PlacementSystem {
         if (!worldPosition) return;
         
         if (!this.isValidPlayerPlacement(worldPosition)) {
-            this.game.uiManager.battleLog.add('Invalid placement - must be on your side!', 'log-damage');
+            this.game.battleLogSystem.add('Invalid placement - must be on your side!', 'log-damage');
             return;
         }
         
@@ -30,8 +30,8 @@ class PlacementSystem {
         this.createUnit(worldPosition.x, worldPosition.z, state.selectedUnitType, 'player');
         state.playerGold -= state.selectedUnitType.value;
         
-        this.game.uiManager.battleLog.add(`Deployed ${state.selectedUnitType.title}`, 'log-victory');
-        this.game.uiManager.effects.showPlacementEffect(
+        this.game.battleLogSystem.add(`Deployed ${state.selectedUnitType.title}`, 'log-victory');
+        this.game.effectsSystem.showPlacementEffect(
             event.clientX - this.canvas.getBoundingClientRect().left,
             event.clientY - this.canvas.getBoundingClientRect().top
         );
@@ -99,7 +99,7 @@ class PlacementSystem {
     }
     
     placeEnemyUnits() {
-        const unitCount = 3 + Math.floor(this.game.uiManager.getGameState().round / 2);
+        const unitCount = 3 + Math.floor(this.game.state.round / 2);
         const UnitTypes = this.game.getCollections().units;
         const availableUnits = Object.values(UnitTypes);
         const availableUnitKeys = Object.keys(UnitTypes);
@@ -123,6 +123,6 @@ class PlacementSystem {
             this.createUnit(worldX, worldZ, { id: unitId, ...unitType }, 'enemy');
         }
         
-        this.game.uiManager.battleLog.add(`Enemy deployed ${unitCount} units!`);
+        this.game.battleLogSystem.add(`Enemy deployed ${unitCount} units!`);
     }
 }
