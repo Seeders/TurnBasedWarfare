@@ -106,10 +106,10 @@
       }
     }
   },
-  "speed": 50,
-  "title": "Plasma Bolt",
+  "speed": 1000,
+  "title": "Bolt",
   "attackSound": "plasma",
   "hitSound": "plasma",
-  "homing": true,
-  "homingStrength": 1
+  "homing": false,
+  "homingStrength": 0
 }

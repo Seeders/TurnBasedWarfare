@@ -1,8 +1,11 @@
 {
-  "speed": 1,
-  "hp": 30,
-  "essence": 10,
-  "value": 5,
+  "title": "Berserker",
+  "size": 15,
+  "value": 160,  
+  "hp": 140,
+  "speed": 55,
+  "damage": 60,
+  "attackSpeed": 1.8,
   "render": {
     "animations": {
       "idle": [
@@ -631,6 +634,5 @@
         }
       }
     }
-  },
-  "title": "stegosaurus"
+  }
 }

@@ -1,8 +1,11 @@
 {
-  "speed": 2,
-  "value": 10,
-  "hp": 5,
-  "essence": 5,
+  "title": "Paladin",
+  "size": 18,
+  "value": 200,  
+  "hp": 250,
+  "speed": 30,
+  "damage": 45,
+  "attackSpeed": 0.9,
   "render": {
     "animations": {
       "idle": [
@@ -662,6 +665,5 @@
         }
       }
     }
-  },
-  "title": "Pterodactyl"
+  }
 }

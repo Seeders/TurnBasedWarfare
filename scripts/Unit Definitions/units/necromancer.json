@@ -1,8 +1,11 @@
 {
-  "hp": 1,
-  "speed": 1.5,
-  "value": 10,
-  "essence": 15,
+  "title": "Necromancer",
+  "size": 13,
+  "value": 275,  
+  "hp": 90,
+  "speed": 35,
+  "damage": 30,
+  "attackSpeed": 1,
   "render": {
     "animations": {
       "idle": [
@@ -200,9 +203,5 @@
         }
       }
     }
-  },
-  "evasion": 75,
-  "energyShield": 30,
-  "size": 5,
-  "title": "ghost"
+  }
 }

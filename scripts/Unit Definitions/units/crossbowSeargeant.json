@@ -1,9 +1,13 @@
 {
-  "title": "New T-Rex",
-  "hp": 200,
-  "speed": 1.5,
-  "value": 10,
-  "essence": 15,
+  "title": "Crossbow Seargeant",
+  "size": 12,
+  "value": 85,  
+  "hp": 75,
+  "speed": 40,
+  "damage": 28,
+  "attackSpeed": 1,
+  "range": 150,
+  "projectile": "bolt",
   "render": {
     "animations": {
       "idle": [

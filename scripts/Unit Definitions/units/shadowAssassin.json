@@ -1,9 +1,11 @@
 {
-  "hp": 500,
-  "speed": 0.5,
-  "essence": 50,
-  "value": 50,
-  "boss": true,
+  "title": "Shadow Assassin",
+  "size": 12,
+  "value": 350,  
+  "hp": 120,
+  "speed": 80,
+  "damage": 85,
+  "attackSpeed": 2.2,
   "render": {
     "animations": {
       "idle": [
@@ -1888,9 +1890,5 @@
         }
       }
     }
-  },
-  "fireResistance": 75,
-  "coldResistance": 25,
-  "electricResistance": 25,
-  "title": "Red Dragon"
+  }
 }

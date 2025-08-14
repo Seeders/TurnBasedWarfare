@@ -1,8 +1,13 @@
 {
-  "hp": 20,
-  "speed": 1.2,
-  "value": 7,
-  "essence": 12,
+  "title": "Elven Archer",
+  "size": 11,
+  "value": 175,  
+  "hp": 85,
+  "speed": 50,
+  "damage": 40,
+  "attackSpeed": 1.6,
+  "range": 180,
+  "projectile": "elvenArrow",
   "render": {
     "animations": {
       "idle": [
@@ -274,7 +279,5 @@
         }
       }
     }
-  },
-  "electricResistance": 75,
-  "title": "skeleton"
+  }
 }

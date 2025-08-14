@@ -1,8 +1,13 @@
 {
-  "hp": 50,
-  "speed": 0.5,
-  "value": 10,
-  "essence": 15,
+  "title": "War Mage",
+  "size": 13,
+  "value": 225,  
+  "hp": 110,
+  "speed": 55,
+  "damage": 55,
+  "attackSpeed": 0.7,
+  "range": 160,
+  "projectile": "fireball",
   "render": {
     "animations": {
       "walk": [
@@ -262,8 +267,5 @@
         }
       }
     }
-  },
-  "title": "spike_ball",
-  "description": "A rolling spike ball monster with spinning spikes",
-  "id": "spike_ball"
+  }
 }

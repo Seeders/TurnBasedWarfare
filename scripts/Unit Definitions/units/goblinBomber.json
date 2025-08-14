@@ -1,8 +1,11 @@
 {
-  "hp": 20,
-  "value": 10,
-  "essence": 15,
-  "speed": 1,
+  "title": "Goblin Bomber",
+  "size": 10,
+  "value": 120,  
+  "hp": 40,
+  "speed": 60,
+  "damage": 70,
+  "attackSpeed": 0,
   "render": {
     "animations": {
       "idle": [
@@ -718,9 +721,5 @@
         }
       }
     }
-  },
-  "coldResistance": 75,
-  "size": 5,
-  "title": "Viking",
-  "entity": "Unit"
+  }
 }

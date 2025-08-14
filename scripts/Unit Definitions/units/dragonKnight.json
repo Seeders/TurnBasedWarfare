@@ -1,9 +1,11 @@
 {
-  "hp": 500,
-  "speed": 0.5,
-  "essence": 50,
-  "value": 50,
-  "boss": true,
+  "title": "Dragon Knight",
+  "size": 22,
+  "value": 400,  
+  "hp": 350,
+  "speed": 40,
+  "damage": 65,
+  "attackSpeed": 1,  
   "render": {
     "animations": {
       "idle": [
@@ -1082,9 +1084,5 @@
         }
       }
     }
-  },
-  "fireResistance": 25,
-  "coldResistance": 75,
-  "electricResistance": 25,
-  "title": "Blue Dragon"
+  }
 }

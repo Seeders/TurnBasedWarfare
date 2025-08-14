@@ -1,9 +1,13 @@
 {
-  "hp": 500,
-  "speed": 0.5,
-  "essence": 50,
-  "value": 50,
-  "boss": true,
+  "title": "Archmage",
+  "size": 14,
+  "value": 450,  
+  "hp": 150,
+  "speed": 30,
+  "damage": 80,
+  "attackSpeed": 0.5,
+  "range": 200,
+  "projectile": "missile",
   "render": {
     "animations": {
       "idle": [
@@ -1046,9 +1050,5 @@
         }
       }
     }
-  },
-  "fireResistance": 50,
-  "coldResistance": 50,
-  "electricResistance": 50,
-  "title": "Green Dragon"
+  }
 }
