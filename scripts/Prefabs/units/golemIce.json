@@ -1,13 +1,16 @@
 {
-  "title": "Scout",
+  "title": "Ice Golem",
   "size": 25,
-  "value": 40,
-  "hp": 95,
-  "speed": 65,
-  "damage": 10,
-  "attackSpeed": 1.8,
-  "element": "physical",
-  "armor": 2,
+  "value": 480,
+  "hp": 720,
+  "speed": 15,
+  "damage": 40,
+  "attackSpeed": 0.7,
+  "element": "cold",
+  "armor": 8,
+  "coldResistance": 1,
+  "lightningResistance": -0.25,
+  "fireResistance": 0.1,
   "render": {
     "animations": {
       "idle": [
@@ -15,12 +18,20 @@
           "main": {
             "shapes": [
               {
+                "type": "gltf",
                 "url": "projects/TurnBasedWarfare/resources/animations/idle.glb",
-                "scale": {
-                  "z": 1,
-                  "y": 1,
-                  "x": 1
-                },
+                "width": 2,
+                "height": 0.2,
+                "depth": 1,
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "rotationX": 0,
+                "rotationY": 0,
+                "rotationZ": 0,
+                "color": "#FFFFFF",
+                "metalness": "0",
+                "roughness": "1",
                 "id": 0
               }
             ]
@@ -32,12 +43,7 @@
           "main": {
             "shapes": [
               {
-                "url": "projects/TurnBasedWarfare/resources/animations/walk_bow.glb",
-                "scale": {
-                  "z": 1,
-                  "y": 1,
-                  "x": 1
-                },
+                "url": "projects/TurnBasedWarfare/resources/animations/mutant_walk.glb",
                 "id": 0
               }
             ]
@@ -49,12 +55,7 @@
           "main": {
             "shapes": [
               {
-                "url": "projects/TurnBasedWarfare/resources/animations/sword_slash.glb",
-                "scale": {
-                  "z": 1,
-                  "y": 1,
-                  "x": 1
-                },
+                "url": "projects/TurnBasedWarfare/resources/animations/mutant_swipe.glb",
                 "id": 0
               }
             ]
@@ -99,7 +100,6 @@
     "model": {
       "main": {
         "position": {
-          "x": 0,
           "y": 0,
           "z": 0
         },
@@ -109,14 +109,14 @@
           "z": 0
         },
         "scale": {
-          "x": 1,
-          "y": 1,
-          "z": 1
+          "x": 2,
+          "y": 2,
+          "z": 2
         },
         "shapes": [
           {
             "type": "gltf",
-            "url": "projects/TurnBasedWarfare/resources/models/scout/scout.glb",
+            "url": "projects/TurnBasedWarfare/resources/models/golem_ice/golem_ice.glb",
             "width": 2,
             "height": 0.2,
             "depth": 1,
@@ -128,34 +128,11 @@
             "rotationZ": 0,
             "color": "#FFFFFF",
             "metalness": "0",
-            "roughness": "1",
-            "scale": {
-              "z": 1,
-              "y": 1,
-              "x": 1
-            }
+            "roughness": "1"
           }
         ]
       }
-    },
-    "equipment": [
-      {
-        "slot": "mainHand",
-        "item": "knightSword",
-        "attachmentData": {
-          "bone": "RightHand",
-          "offset": {
-            "x": 0,
-            "y": 20,
-            "z": -5
-          },
-          "rotation": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        }
-      }
-    ]
-  }
+    }
+  },
+  "buyable": false
 }
