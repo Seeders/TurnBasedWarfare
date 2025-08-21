@@ -1,16 +1,18 @@
 {
-  "title": "Crusader",
+  "title": "Scout (1) [DI]",
   "size": 25,
-  "value": 110,
-  "hp": 200,
-  "speed": 35,
-  "damage": 14,
-  "attackSpeed": 1,
+  "value": 35,
+  "hp": 100,
+  "speed": 60,
+  "damage": 9,
+  "attackSpeed": 1.1,
+  "range": 100,
+  "projectile": "arrow",
   "element": "physical",
-  "armor": 6,
-  "fireResistance": 0.2,
-  "coldResistance": 0.2,
-  "lightningResistance": 0.2,
+  "armor": 0,
+  "fireResistance": 0.05,
+  "coldResistance": 0.05,
+  "lightningResistance": 0.05,
   "render": {
     "animations": {
       "idle": [
@@ -19,6 +21,11 @@
             "shapes": [
               {
                 "url": "projects/TurnBasedWarfare/resources/animations/idle.glb",
+                "scale": {
+                  "z": 1,
+                  "y": 1,
+                  "x": 1
+                },
                 "id": 0
               }
             ]
@@ -30,7 +37,12 @@
           "main": {
             "shapes": [
               {
-                "url": "projects/TurnBasedWarfare/resources/animations/walk_with_shield.glb",
+                "url": "projects/TurnBasedWarfare/resources/animations/walk_bow.glb",
+                "scale": {
+                  "z": 1,
+                  "y": 1,
+                  "x": 1
+                },
                 "id": 0
               }
             ]
@@ -42,7 +54,12 @@
           "main": {
             "shapes": [
               {
-                "url": "projects/TurnBasedWarfare/resources/animations/sword_slash.glb",
+                "url": "projects/TurnBasedWarfare/resources/animations/shooting_arrow.glb",
+                "scale": {
+                  "z": 1,
+                  "y": 1,
+                  "x": 1
+                },
                 "id": 0
               }
             ]
@@ -104,7 +121,7 @@
         "shapes": [
           {
             "type": "gltf",
-            "url": "projects/TurnBasedWarfare/resources/models/templar/templar.glb",
+            "url": "projects/TurnBasedWarfare/resources/models/ranger/ranger.glb",
             "width": 2,
             "height": 0.2,
             "depth": 1,
@@ -116,7 +133,12 @@
             "rotationZ": 0,
             "color": "#FFFFFF",
             "metalness": "0",
-            "roughness": "1"
+            "roughness": "1",
+            "scale": {
+              "z": 1,
+              "y": 1,
+              "x": 1
+            }
           }
         ]
       }
@@ -124,33 +146,16 @@
     "equipment": [
       {
         "slot": "mainHand",
-        "item": "knightSword",
-        "attachmentData": {
-          "bone": "RightHand",
-          "offset": {
-            "x": -1,
-            "y": 10,
-            "z": 2
-          },
-          "rotation": {
-            "x": 0,
-            "y": 8,
-            "z": 0
-          }
-        }
-      },
-      {
-        "slot": "offHand",
-        "item": "knightShield",
+        "item": "woodBow",
         "attachmentData": {
           "bone": "LeftHand",
           "offset": {
-            "x": 5,
-            "y": 0,
-            "z": 0
+            "x": 0,
+            "y": 13,
+            "z": 5
           },
           "rotation": {
-            "x": 10,
+            "x": 0,
             "y": 0,
             "z": 0
           }
@@ -158,5 +163,10 @@
       }
     ]
   },
-  "buyable": false
+  "buyable": true,
+  "specUnits": [
+    "2_di_goblinBomber",
+    "2_di_shadowAssassin",
+    "2_di_trickster"
+  ]
 }

@@ -1,14 +1,16 @@
 {
-  "title": "Goblin Bomber",
+  "title": "Spearman (2) [SD]",
   "size": 25,
-  "value": 120,
-  "hp": 40,
-  "speed": 60,
-  "damage": 70,
-  "attackSpeed": 0,
+  "value": 380,
+  "hp": 450,
+  "speed": 40,
+  "damage": 32,
+  "attackSpeed": 1,
   "element": "fire",
-  "armor": 1,
-  "fireResistance": 0.2,
+  "armor": 12,
+  "fireResistance": 0.6,
+  "coldResistance": 0.1,
+  "lightningResistance": 0.2,
   "render": {
     "animations": {
       "idle": [
@@ -28,7 +30,7 @@
           "main": {
             "shapes": [
               {
-                "url": "projects/TurnBasedWarfare/resources/animations/walk_steady_right_hand.glb",
+                "url": "projects/TurnBasedWarfare/resources/animations/walk_with_shield.glb",
                 "id": 0
               }
             ]
@@ -95,14 +97,14 @@
           "z": 0
         },
         "scale": {
-          "x": 0.5,
-          "y": 0.5,
-          "z": 0.5
+          "x": 1,
+          "y": 1,
+          "z": 1
         },
         "shapes": [
           {
             "type": "gltf",
-            "url": "projects/TurnBasedWarfare/resources/models/goblin/goblin.glb",
+            "url": "projects/TurnBasedWarfare/resources/models/dark_knight/dark_knight.glb",
             "width": 2,
             "height": 0.2,
             "depth": 1,
@@ -118,7 +120,43 @@
           }
         ]
       }
-    }
+    },
+    "equipment": [
+      {
+        "slot": "mainHand",
+        "item": "knightSword",
+        "attachmentData": {
+          "bone": "RightHand",
+          "offset": {
+            "x": 0,
+            "y": 10,
+            "z": -10
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "slot": "offHand",
+        "item": "knightShield",
+        "attachmentData": {
+          "bone": "",
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": -20
+          },
+          "rotation": {
+            "x": 10,
+            "y": 0,
+            "z": 0
+          }
+        }
+      }
+    ]
   },
   "buyable": false
 }

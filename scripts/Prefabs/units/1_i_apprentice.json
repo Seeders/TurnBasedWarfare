@@ -1,18 +1,14 @@
 {
-  "title": "Scout",
+  "title": "Apprentice (1) [I]",
   "size": 25,
   "value": 35,
   "hp": 100,
-  "speed": 60,
+  "speed": 50,
   "damage": 10,
-  "attackSpeed": 1.5,
-  "range": 100,
-  "projectile": "arrow",
-  "element": "poison",
+  "attackSpeed": 1,
+  "range": 150,
+  "element": "fire",
   "armor": 0,
-  "fireResistance": 0,
-  "coldResistance": 0,
-  "lightningResistance": 0,
   "render": {
     "animations": {
       "idle": [
@@ -54,7 +50,7 @@
           "main": {
             "shapes": [
               {
-                "url": "projects/TurnBasedWarfare/resources/animations/shooting_arrow.glb",
+                "url": "projects/TurnBasedWarfare/resources/models/1h_spell_throw/1h_spell_throw.glb",
                 "scale": {
                   "z": 1,
                   "y": 1,
@@ -121,7 +117,7 @@
         "shapes": [
           {
             "type": "gltf",
-            "url": "projects/TurnBasedWarfare/resources/models/ranger/ranger.glb",
+            "url": "projects/TurnBasedWarfare/resources/models/apprentice/apprentice.glb",
             "width": 2,
             "height": 0.2,
             "depth": 1,
@@ -146,13 +142,13 @@
     "equipment": [
       {
         "slot": "mainHand",
-        "item": "woodBow",
+        "item": "woodStaff",
         "attachmentData": {
-          "bone": "LeftHand",
+          "bone": "RightHand",
           "offset": {
-            "x": 0,
-            "y": 13,
-            "z": 5
+            "x": 10,
+            "y": 0,
+            "z": 0
           },
           "rotation": {
             "x": 0,
@@ -163,5 +159,11 @@
       }
     ]
   },
-  "buyable": true
+  "buyable": true,
+  "projectile": "fireball",
+  "specUnits": [
+    "2_i_elementalist",
+    "2_i_enchanter",
+    "2_i_necromancer"
+  ]
 }

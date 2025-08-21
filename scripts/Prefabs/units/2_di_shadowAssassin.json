@@ -1,14 +1,16 @@
 {
-  "title": "Apprentice",
+  "title": "Shadow Assassin (2) [DI]",
   "size": 25,
-  "value": 35,
-  "hp": 100,
-  "speed": 50,
-  "damage": 10,
-  "attackSpeed": 1,
-  "range": 150,
-  "element": "fire",
-  "armor": 0,
+  "value": 320,
+  "hp": 160,
+  "speed": 80,
+  "damage": 28,
+  "attackSpeed": 2,
+  "element": "poison",
+  "armor": 4,
+  "fireResistance": 0.1,
+  "coldResistance": 0.2,
+  "lightningResistance": 0.15,
   "render": {
     "animations": {
       "idle": [
@@ -16,12 +18,20 @@
           "main": {
             "shapes": [
               {
+                "type": "gltf",
                 "url": "projects/TurnBasedWarfare/resources/animations/idle.glb",
-                "scale": {
-                  "z": 1,
-                  "y": 1,
-                  "x": 1
-                },
+                "width": 2,
+                "height": 0.2,
+                "depth": 1,
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "rotationX": 0,
+                "rotationY": 0,
+                "rotationZ": 0,
+                "color": "#FFFFFF",
+                "metalness": "0",
+                "roughness": "1",
                 "id": 0
               }
             ]
@@ -33,12 +43,20 @@
           "main": {
             "shapes": [
               {
+                "type": "gltf",
                 "url": "projects/TurnBasedWarfare/resources/animations/walk_bow.glb",
-                "scale": {
-                  "z": 1,
-                  "y": 1,
-                  "x": 1
-                },
+                "width": 2,
+                "height": 0.2,
+                "depth": 1,
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "rotationX": 0,
+                "rotationY": 0,
+                "rotationZ": 0,
+                "color": "#FFFFFF",
+                "metalness": "0",
+                "roughness": "1",
                 "id": 0
               }
             ]
@@ -50,12 +68,20 @@
           "main": {
             "shapes": [
               {
-                "url": "projects/TurnBasedWarfare/resources/models/1h_spell_throw/1h_spell_throw.glb",
-                "scale": {
-                  "z": 1,
-                  "y": 1,
-                  "x": 1
-                },
+                "type": "gltf",
+                "url": "projects/TurnBasedWarfare/resources/animations/sword_slash.glb",
+                "width": 2,
+                "height": 0.2,
+                "depth": 1,
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "rotationX": 0,
+                "rotationY": 0,
+                "rotationZ": 0,
+                "color": "#FFFFFF",
+                "metalness": "0",
+                "roughness": "1",
                 "id": 0
               }
             ]
@@ -117,7 +143,7 @@
         "shapes": [
           {
             "type": "gltf",
-            "url": "projects/TurnBasedWarfare/resources/models/apprentice/apprentice.glb",
+            "url": "projects/TurnBasedWarfare/resources/models/shadow_assassin/shadow_assassin.glb",
             "width": 2,
             "height": 0.2,
             "depth": 1,
@@ -129,12 +155,7 @@
             "rotationZ": 0,
             "color": "#FFFFFF",
             "metalness": "0",
-            "roughness": "1",
-            "scale": {
-              "z": 1,
-              "y": 1,
-              "x": 1
-            }
+            "roughness": "1"
           }
         ]
       }
@@ -142,23 +163,39 @@
     "equipment": [
       {
         "slot": "mainHand",
-        "item": "woodStaff",
+        "item": "knightSword",
         "attachmentData": {
           "bone": "RightHand",
           "offset": {
-            "x": 10,
+            "x": 0,
             "y": 0,
             "z": 0
           },
           "rotation": {
             "x": 0,
+            "y": 20,
+            "z": 0
+          }
+        }
+      },
+      {
+        "slot": "offHand",
+        "item": "knightSword",
+        "attachmentData": {
+          "bone": "LeftHand",
+          "offset": {
+            "x": 0,
             "y": 0,
             "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": -20,
+            "z": -910
           }
         }
       }
     ]
   },
-  "buyable": true,
-  "projectile": "fireball"
+  "buyable": false
 }

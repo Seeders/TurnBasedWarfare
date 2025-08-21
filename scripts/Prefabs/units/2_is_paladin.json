@@ -1,17 +1,16 @@
 {
-  "title": "Knight",
-  "size": 35,
+  "title": "Paladin (2) [IS]",
+  "size": 25,
   "value": 110,
-  "hp": 240,
-  "speed": 25,
-  "damage": 20,
-  "attackSpeed": 0.9,
-  "element": "physical",
-  "armor": 8,
-  "fireResistance": 0.15,
-  "coldResistance": 0.15,
-  "lightningResistance": 0.1,
-  "poisonResistance": 0.2,
+  "hp": 200,
+  "speed": 35,
+  "damage": 14,
+  "attackSpeed": 1,
+  "element": "divine",
+  "armor": 6,
+  "fireResistance": 0.2,
+  "coldResistance": 0.2,
+  "lightningResistance": 0.2,
   "render": {
     "animations": {
       "idle": [
@@ -97,9 +96,15 @@
           "y": 0,
           "z": 0
         },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
         "shapes": [
           {
             "type": "gltf",
+            "url": "projects/TurnBasedWarfare/resources/models/templar/templar.glb",
             "width": 2,
             "height": 0.2,
             "depth": 1,
@@ -110,16 +115,10 @@
             "rotationY": 0,
             "rotationZ": 0,
             "color": "#FFFFFF",
-            "url": "projects/TurnBasedWarfare/resources/models/knight/knight.glb",
-            "metalness": ".6",
-            "roughness": ".5"
+            "metalness": "0",
+            "roughness": "1"
           }
-        ],
-        "scale": {
-          "z": 1,
-          "y": 1,
-          "x": 1
-        }
+        ]
       }
     },
     "equipment": [
@@ -129,13 +128,13 @@
         "attachmentData": {
           "bone": "RightHand",
           "offset": {
-            "x": 6,
-            "y": 16,
-            "z": 0
+            "x": -1,
+            "y": 10,
+            "z": 2
           },
           "rotation": {
             "x": 0,
-            "y": 0,
+            "y": 8,
             "z": 0
           }
         }
@@ -146,9 +145,9 @@
         "attachmentData": {
           "bone": "LeftHand",
           "offset": {
-            "x": 0,
-            "y": 10,
-            "z": -6
+            "x": 5,
+            "y": 0,
+            "z": 0
           },
           "rotation": {
             "x": 10,

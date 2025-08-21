@@ -1,18 +1,16 @@
 {
-  "title": "Necromancer",
+  "title": "Crusader (2) [IS]",
   "size": 25,
-  "value": 250,
-  "hp": 180,
+  "value": 110,
+  "hp": 200,
   "speed": 35,
-  "damage": 12,
+  "damage": 14,
   "attackSpeed": 1,
-  "element": "poison",
-  "armor": 3,
-  "fireResistance": 0.1,
-  "coldResistance": 0.3,
+  "element": "physical",
+  "armor": 6,
+  "fireResistance": 0.2,
+  "coldResistance": 0.2,
   "lightningResistance": 0.2,
-  "range": 100,
-  "projectile": "fireball",
   "render": {
     "animations": {
       "idle": [
@@ -32,7 +30,7 @@
           "main": {
             "shapes": [
               {
-                "url": "projects/TurnBasedWarfare/resources/animations/walk_steady_right_hand.glb",
+                "url": "projects/TurnBasedWarfare/resources/animations/walk_with_shield.glb",
                 "id": 0
               }
             ]
@@ -44,17 +42,7 @@
           "main": {
             "shapes": [
               {
-                "type": "gltf",
-                "url": "projects/TurnBasedWarfare/resources/animations/2h_spell_summon.glb",
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "rotationX": 0,
-                "rotationY": 0,
-                "rotationZ": 0,
-                "color": "#FFFFFF",
-                "metalness": "0",
-                "roughness": "1",
+                "url": "projects/TurnBasedWarfare/resources/animations/sword_slash.glb",
                 "id": 0
               }
             ]
@@ -116,7 +104,10 @@
         "shapes": [
           {
             "type": "gltf",
-            "url": "projects/TurnBasedWarfare/resources/models/lich/lich.glb",
+            "url": "projects/TurnBasedWarfare/resources/models/templar/templar.glb",
+            "width": 2,
+            "height": 0.2,
+            "depth": 1,
             "x": 0,
             "y": 0,
             "z": 0,
@@ -137,38 +128,35 @@
         "attachmentData": {
           "bone": "RightHand",
           "offset": {
-            "x": -2,
-            "y": 5,
-            "z": -5
+            "x": -1,
+            "y": 10,
+            "z": 2
           },
           "rotation": {
             "x": 0,
-            "y": 0,
+            "y": 8,
             "z": 0
           }
         }
       },
       {
         "slot": "offHand",
-        "item": "woodStaff",
+        "item": "knightShield",
         "attachmentData": {
-          "bone": "",
+          "bone": "LeftHand",
           "offset": {
-            "x": 0,
-            "y": 5,
-            "z": -6
+            "x": 5,
+            "y": 0,
+            "z": 0
           },
           "rotation": {
-            "x": 0,
-            "y": 150,
+            "x": 10,
+            "y": 0,
             "z": 0
           }
         }
       }
     ]
   },
-  "abilities": [
-    "RaiseDeadAbility"
-  ],
   "buyable": false
 }

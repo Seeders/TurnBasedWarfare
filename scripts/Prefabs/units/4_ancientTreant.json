@@ -1,16 +1,16 @@
 {
-  "title": "Dragon Knight",
+  "title": "Ancient Treant",
   "size": 25,
-  "value": 380,
-  "hp": 450,
-  "speed": 40,
-  "damage": 32,
-  "attackSpeed": 1,
-  "element": "fire",
+  "value": 480,
+  "hp": 720,
+  "speed": 15,
+  "damage": 40,
+  "attackSpeed": 0.7,
+  "element": "physical",
   "armor": 12,
-  "fireResistance": 0.6,
-  "coldResistance": 0.1,
-  "lightningResistance": 0.2,
+  "fireResistance": -0.2,
+  "coldResistance": 0.3,
+  "lightningResistance": 0.1,
   "render": {
     "animations": {
       "idle": [
@@ -18,7 +18,7 @@
           "main": {
             "shapes": [
               {
-                "url": "projects/TurnBasedWarfare/resources/animations/idle.glb",
+                "url": "projects/TurnBasedWarfare/resources/animations/mutant_idle.glb",
                 "id": 0
               }
             ]
@@ -30,7 +30,7 @@
           "main": {
             "shapes": [
               {
-                "url": "projects/TurnBasedWarfare/resources/animations/walk_with_shield.glb",
+                "url": "projects/TurnBasedWarfare/resources/animations/mutant_walk.glb",
                 "id": 0
               }
             ]
@@ -42,7 +42,7 @@
           "main": {
             "shapes": [
               {
-                "url": "projects/TurnBasedWarfare/resources/animations/sword_slash.glb",
+                "url": "projects/TurnBasedWarfare/resources/animations/mutant_swipe.glb",
                 "id": 0
               }
             ]
@@ -87,7 +87,6 @@
     "model": {
       "main": {
         "position": {
-          "x": 0,
           "y": 0,
           "z": 0
         },
@@ -97,14 +96,14 @@
           "z": 0
         },
         "scale": {
-          "x": 1,
-          "y": 1,
-          "z": 1
+          "x": 2,
+          "y": 2,
+          "z": 2
         },
         "shapes": [
           {
             "type": "gltf",
-            "url": "projects/TurnBasedWarfare/resources/models/dark_knight/dark_knight.glb",
+            "url": "projects/TurnBasedWarfare/resources/models/treant/treant.glb",
             "width": 2,
             "height": 0.2,
             "depth": 1,
@@ -120,43 +119,7 @@
           }
         ]
       }
-    },
-    "equipment": [
-      {
-        "slot": "mainHand",
-        "item": "knightSword",
-        "attachmentData": {
-          "bone": "RightHand",
-          "offset": {
-            "x": 0,
-            "y": 10,
-            "z": -10
-          },
-          "rotation": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        }
-      },
-      {
-        "slot": "offHand",
-        "item": "knightShield",
-        "attachmentData": {
-          "bone": "",
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": -20
-          },
-          "rotation": {
-            "x": 10,
-            "y": 0,
-            "z": 0
-          }
-        }
-      }
-    ]
+    }
   },
   "buyable": false
 }
