@@ -1,16 +1,17 @@
 {
-  "title": "Gladiator (2) [SD]",
-  "size": 25,
-  "value": 50,
-  "hp": 150,
-  "speed": 35,
-  "damage": 12,
-  "attackSpeed": 1,
+  "title": "Raider (2) [S]",
+  "size": 35,
+  "value": 110,
+  "hp": 240,
+  "speed": 25,
+  "damage": 20,
+  "attackSpeed": 0.9,
   "element": "physical",
-  "armor": 4,
-  "fireResistance": 0.05,
-  "coldResistance": 0.05,
-  "lightningResistance": 0.05,
+  "armor": 8,
+  "fireResistance": 0.15,
+  "coldResistance": 0.15,
+  "lightningResistance": 0.1,
+  "poisonResistance": 0.2,
   "render": {
     "animations": {
       "idle": [
@@ -19,11 +20,6 @@
             "shapes": [
               {
                 "url": "projects/TurnBasedWarfare/resources/animations/idle.glb",
-                "scale": {
-                  "z": 1,
-                  "y": 1,
-                  "x": 1
-                },
                 "id": 0
               }
             ]
@@ -36,11 +32,6 @@
             "shapes": [
               {
                 "url": "projects/TurnBasedWarfare/resources/animations/walk_with_shield.glb",
-                "scale": {
-                  "z": 1,
-                  "y": 1,
-                  "x": 1
-                },
                 "id": 0
               }
             ]
@@ -53,11 +44,6 @@
             "shapes": [
               {
                 "url": "projects/TurnBasedWarfare/resources/animations/sword_slash.glb",
-                "scale": {
-                  "z": 1,
-                  "y": 1,
-                  "x": 1
-                },
                 "id": 0
               }
             ]
@@ -111,15 +97,9 @@
           "y": 0,
           "z": 0
         },
-        "scale": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        },
         "shapes": [
           {
             "type": "gltf",
-            "url": "projects/TurnBasedWarfare/resources/models/peasant/peasant.glb",
             "width": 2,
             "height": 0.2,
             "depth": 1,
@@ -129,19 +109,37 @@
             "rotationX": 0,
             "rotationY": 0,
             "rotationZ": 0,
-            "color": "#FFFFFF",
             "metalness": "0",
             "roughness": "1",
-            "scale": {
-              "z": 1,
-              "y": 1,
-              "x": 1
-            }
+            "color": "#FFFFFF",
+            "url": "projects/TurnBasedWarfare/resources/models/berserker/berserker.glb"
           }
-        ]
+        ],
+        "scale": {
+          "z": 1,
+          "y": 1,
+          "x": 1
+        }
       }
     },
     "equipment": [
+      {
+        "slot": "mainHand",
+        "item": "knightSword",
+        "attachmentData": {
+          "bone": "RightHand",
+          "offset": {
+            "x": 6,
+            "y": 16,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
       {
         "slot": "offHand",
         "item": "knightShield",
@@ -149,28 +147,11 @@
           "bone": "LeftHand",
           "offset": {
             "x": 0,
-            "y": 0,
-            "z": 0
+            "y": 10,
+            "z": -6
           },
           "rotation": {
-            "x": 15,
-            "y": 0,
-            "z": 0
-          }
-        }
-      },
-      {
-        "slot": "mainHand",
-        "item": "knightSword",
-        "attachmentData": {
-          "bone": "RightHand",
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 5
-          },
-          "rotation": {
-            "x": 0,
+            "x": 10,
             "y": 0,
             "z": 0
           }

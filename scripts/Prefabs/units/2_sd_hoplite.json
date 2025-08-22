@@ -1,5 +1,5 @@
 {
-  "title": "Spearman (2) [SD]",
+  "title": "Hoplite (2) [SD]",
   "size": 25,
   "value": 380,
   "hp": 450,
@@ -104,7 +104,7 @@
         "shapes": [
           {
             "type": "gltf",
-            "url": "projects/TurnBasedWarfare/resources/models/dark_knight/dark_knight.glb",
+            "url": "projects/TurnBasedWarfare/resources/models/hoplite/hoplite.glb",
             "width": 2,
             "height": 0.2,
             "depth": 1,

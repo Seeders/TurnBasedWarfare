@@ -1,13 +1,13 @@
 {
-  "title": "Weapon Master (1) [SD]",
+  "title": "Gladiator (2) [S]",
   "size": 25,
-  "value": 35,
-  "hp": 100,
-  "speed": 50,
-  "damage": 9,
-  "attackSpeed": 1.1,
+  "value": 50,
+  "hp": 150,
+  "speed": 35,
+  "damage": 12,
+  "attackSpeed": 1,
   "element": "physical",
-  "armor": 3,
+  "armor": 4,
   "fireResistance": 0.05,
   "coldResistance": 0.05,
   "lightningResistance": 0.05,
@@ -119,7 +119,7 @@
         "shapes": [
           {
             "type": "gltf",
-            "url": "projects/TurnBasedWarfare/resources/models/peasant/peasant.glb",
+            "url": "projects/TurnBasedWarfare/resources/models/gladiator/gladiator.glb",
             "width": 2,
             "height": 0.2,
             "depth": 1,
@@ -143,45 +143,23 @@
     },
     "equipment": [
       {
-        "slot": "offHand",
-        "item": "knightShield",
-        "attachmentData": {
-          "bone": "LeftHand",
-          "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          },
-          "rotation": {
-            "x": 15,
-            "y": 0,
-            "z": 0
-          }
-        }
-      },
-      {
         "slot": "mainHand",
         "item": "knightSword",
         "attachmentData": {
           "bone": "RightHand",
           "offset": {
-            "x": 0,
-            "y": 0,
-            "z": 5
+            "x": 2,
+            "y": 5,
+            "z": 2
           },
           "rotation": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": 10
           }
         }
       }
     ]
   },
-  "buyable": true,
-  "specUnits": [
-    "2_sd_spearman",
-    "2_sd_gladiator",
-    "2_sd_crossbowSeargeant"
-  ]
+  "buyable": false
 }

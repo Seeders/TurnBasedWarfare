@@ -1,5 +1,5 @@
 {
-  "title": "Knight (2) [S]",
+  "title": "Knight (2) [SD]",
   "size": 35,
   "value": 110,
   "hp": 240,
@@ -111,8 +111,8 @@
             "rotationZ": 0,
             "color": "#FFFFFF",
             "url": "projects/TurnBasedWarfare/resources/models/knight/knight.glb",
-            "metalness": ".6",
-            "roughness": ".5"
+            "metalness": "0",
+            "roughness": "1"
           }
         ],
         "scale": {

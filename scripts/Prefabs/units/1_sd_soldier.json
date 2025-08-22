@@ -1,17 +1,16 @@
 {
-  "title": "Captain (2) [S]",
-  "size": 35,
-  "value": 110,
-  "hp": 240,
-  "speed": 25,
-  "damage": 20,
-  "attackSpeed": 0.9,
+  "title": "Soldier (1) [SD]",
+  "size": 25,
+  "value": 35,
+  "hp": 100,
+  "speed": 50,
+  "damage": 9,
+  "attackSpeed": 1.1,
   "element": "physical",
-  "armor": 8,
-  "fireResistance": 0.15,
-  "coldResistance": 0.15,
-  "lightningResistance": 0.1,
-  "poisonResistance": 0.2,
+  "armor": 3,
+  "fireResistance": 0.05,
+  "coldResistance": 0.05,
+  "lightningResistance": 0.05,
   "render": {
     "animations": {
       "idle": [
@@ -20,6 +19,11 @@
             "shapes": [
               {
                 "url": "projects/TurnBasedWarfare/resources/animations/idle.glb",
+                "scale": {
+                  "z": 1,
+                  "y": 1,
+                  "x": 1
+                },
                 "id": 0
               }
             ]
@@ -32,6 +36,11 @@
             "shapes": [
               {
                 "url": "projects/TurnBasedWarfare/resources/animations/walk_with_shield.glb",
+                "scale": {
+                  "z": 1,
+                  "y": 1,
+                  "x": 1
+                },
                 "id": 0
               }
             ]
@@ -44,6 +53,11 @@
             "shapes": [
               {
                 "url": "projects/TurnBasedWarfare/resources/animations/sword_slash.glb",
+                "scale": {
+                  "z": 1,
+                  "y": 1,
+                  "x": 1
+                },
                 "id": 0
               }
             ]
@@ -97,9 +111,15 @@
           "y": 0,
           "z": 0
         },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
         "shapes": [
           {
             "type": "gltf",
+            "url": "projects/TurnBasedWarfare/resources/models/warrior/warrior.glb",
             "width": 2,
             "height": 0.2,
             "depth": 1,
@@ -110,36 +130,18 @@
             "rotationY": 0,
             "rotationZ": 0,
             "color": "#FFFFFF",
-            "url": "projects/TurnBasedWarfare/resources/models/knight/knight.glb",
-            "metalness": ".6",
-            "roughness": ".5"
+            "metalness": "0",
+            "roughness": "1",
+            "scale": {
+              "z": 1,
+              "y": 1,
+              "x": 1
+            }
           }
-        ],
-        "scale": {
-          "z": 1,
-          "y": 1,
-          "x": 1
-        }
+        ]
       }
     },
     "equipment": [
-      {
-        "slot": "mainHand",
-        "item": "knightSword",
-        "attachmentData": {
-          "bone": "RightHand",
-          "offset": {
-            "x": 6,
-            "y": 16,
-            "z": 0
-          },
-          "rotation": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-          }
-        }
-      },
       {
         "slot": "offHand",
         "item": "knightShield",
@@ -147,11 +149,28 @@
           "bone": "LeftHand",
           "offset": {
             "x": 0,
-            "y": 10,
-            "z": -6
+            "y": 0,
+            "z": 0
           },
           "rotation": {
-            "x": 10,
+            "x": 15,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "slot": "mainHand",
+        "item": "knightSword",
+        "attachmentData": {
+          "bone": "RightHand",
+          "offset": {
+            "x": 0,
+            "y": 15,
+            "z": 5
+          },
+          "rotation": {
+            "x": 0,
             "y": 0,
             "z": 0
           }
@@ -159,5 +178,10 @@
       }
     ]
   },
-  "buyable": false
+  "buyable": true,
+  "specUnits": [
+    "2_sd_gladiator",
+    "2_sd_knight",
+    "2_sd_hoplite"
+  ]
 }
