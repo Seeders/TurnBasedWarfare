@@ -121,6 +121,9 @@
         },
         {
           "type": "MultiplayerUISystem"
+        },    
+        {
+          "type": "SchedulingSystem"
         }
       ],
       "classes": [
