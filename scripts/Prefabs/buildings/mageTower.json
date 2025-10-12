@@ -1,11 +1,8 @@
 {
-  "title": "Fusion Core",
-  "info": "Creates additional energy every second.",
-  "cost": 50,
-  "population": 1,
-  "attackSpeed": 1,
-  "critMultiplier": 1,
-  "mineAmt": 1,
+  "title": "Mage Tower",
+  "info": "Intelligence based training.",
+  "value": 50,
+  "category": "attribute",
   "render": {
     "animations": {
       "idle": [
@@ -358,5 +355,8 @@
         }
       }
     }
-  }
+  },
+  "upgrades": [
+    "spellDamage"
+  ]
 }
