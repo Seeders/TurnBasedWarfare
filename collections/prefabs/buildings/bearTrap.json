@@ -60,7 +60,7 @@
   "hp": 100,
   "stealth": 75,
   "abilities": [
-    "SnapTrapAbility"
+    "BearTrapTrigger"
   ],
   "isTrap": true,
   "isHidden": true,
