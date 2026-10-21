@@ -1,4 +1,4 @@
-import BaseMovementSystem from '../../../../../../global/collections/scripts/systems/js/BaseMovementSystem.js';
+import BaseMovementSystem from '@global/scripts/systems/js/BaseMovementSystem.js';
 
 /**
  * MovementSystem for TurnBasedWarfare

@@ -1,4 +1,4 @@
-import BaseBehaviorSystem from '../../../../../../global/collections/scripts/systems/js/BaseBehaviorSystem.js';
+import BaseBehaviorSystem from '@global/scripts/systems/js/BaseBehaviorSystem.js';
 
 /**
  * BehaviorSystem for TurnBasedWarfare
