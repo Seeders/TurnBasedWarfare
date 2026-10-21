@@ -1,0 +1,4 @@
+node_modules/
+dist/
+simulation_results/
+*.log

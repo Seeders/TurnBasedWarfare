@@ -18,6 +18,12 @@
     "accuracy": 100,
     "evasion": 0,
     "criticalChance": 0,
-    "criticalMultiplier": 1.5
+    "criticalMultiplier": 1.5,
+    "turnSpeed": 10,
+    "blockChance": 0,
+    "fireDamage": 0,
+    "coldDamage": 0,
+    "lifeLeech": 0,
+    "thorns": 0
   }
 }
