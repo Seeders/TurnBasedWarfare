@@ -15,7 +15,8 @@
     "particleEffectSystemModule",
     "particleEffectModule",
     "simulationModule",
-    "systemsEditor"
+    "systemsEditor",
+    "attachmentModule"
   ],
   "path": "/",
   "fileName": "editor"
